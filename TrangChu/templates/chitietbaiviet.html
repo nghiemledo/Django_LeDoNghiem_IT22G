@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h3><a style="text-decoration: none;" href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h3>
+    {% if post.img %}
+        <p>
+            <img src="img/{{ post.img.url }}" width="500px" height="300px">
+        </p>
+    {% else  %}
+    <p></p>
+    {% endif %}
+    {% if post.content %}
+        <p>{{ post.content }}</p>
+    {% endif %}
+    <h6>on {{ post.created_at }}</h6>
+    {{ post.body|safe|linebreaks }}
+</div>
+{% endblock %}

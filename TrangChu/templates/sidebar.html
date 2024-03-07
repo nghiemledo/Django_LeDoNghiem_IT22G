@@ -1,0 +1,28 @@
+{% block sidebar %}
+
+<style>
+  .card {
+    box-shadow: 0 16px 48px #6a6a6b;
+  }
+</style>
+
+<div class="float-end" id="about">
+  <div class="card">
+    <h5 class="card-header">About</h5>
+    <div class="card-body">
+      <p class="card-text">
+        My Blog App is created using Django Web Framework for backend side,
+        designed with bootstrap theme for UI - you can also visit my website
+        ...
+      </p>
+      <a href="https://github.com/nghiemledo" class="btn btn-danger"
+        >Visit Website!</a
+      >
+      <a href="https://docs.djangoproject.com/en/3.1/" class="btn btn-secondary"
+        >Django Docs</a
+      >
+    </div>
+  </div>
+</div>
+
+{% endblock sidebar %}

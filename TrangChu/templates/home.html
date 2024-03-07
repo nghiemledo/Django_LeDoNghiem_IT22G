@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container" id="post">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in Posts %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title"><a style="text-decoration: none;" href="{{post.id}}">{{post.title}}</a> </h2>
+                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_at}} </p>
+                    <p class="card-text">{{post.content|slice:":200"}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+            {% block sidebar %} 
+            {% include 'sidebar.html' %} 
+            {% endblock sidebar %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
