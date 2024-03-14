@@ -32,13 +32,70 @@
 
           <ul class="nav nav-pills">
             <li class="nav-item">
-              <a href="#" class="nav-link" aria-current="page">Home</a>
+              <a href="#about" class="nav-link" aria-current="page">About</a>
             </li>
-            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;">Đăng kí</a></li>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header" style="align-items: center;">
+                    <h1 class="modal-title fs-5" id="signup" style="margin: 0 150px">Đăng kí</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="username" class="form-label">Tài khoản</label>
+                        <input type="text" class="form-control" id="username">
+                      </div>
+                      <div class="mb-3">
+                        <label for="emailaddress" class="form-label">Địa chỉ email</label>
+                        <input type="email" class="form-control" id="emailaddress" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="passwordaddress" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="passwordaddress">
+                      </div>
+                      <div class="mb-3">
+                        <label for="confirmpassword" class="form-label">Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="confirmpassword">
+                      </div>
+                      <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng kí</button>
+                    </form>    
+                  </div>
+                </div>
+              </div>
+            </div>
             <li class="nav-item">
-              <a href="#post" class="nav-link" >Sample post</a>
+            <li class="nav-item"><button type="btn" class="btn btn-primary" class="nav-link" data-bs-toggle="modal" data-bs-target="#login" style="cursor: pointer;">Đăng nhập</button></li>
+              
+              <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header" style="align-items: center;">
+                      <h1 class="modal-title fs-5" id="login" style="margin: 0 150px">Đăng nhập</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="username2" class="form-label">Tài khoản</label>
+                          <input type="text" class="form-control" id="username2">
+                        </div>
+                        <div class="mb-3">
+                          <label for="password2" class="form-label">Mật khẩu</label>
+                          <input type="password" class="form-control" id="password2">
+                        </div>
+                     
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Đăng nhập</button>
+                      </form>    
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </header>
     </header>
